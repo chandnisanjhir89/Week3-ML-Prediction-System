@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load Model
-model = joblib.load("models/diabetes_model.pkl")
+model = joblib.load("diabetes_model.pkl")
 
 # App Title
 st.title("Diabetes Prediction System")
