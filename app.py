@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 
 # Load Model
-model = joblib.load("diabetes_model.pkl")
-
+import os
+model = joblib.load(os.path.join(os.path.dirname(__file__), "diabetes_model.pkl"))
 # App Title
 st.title("Diabetes Prediction System")
 
@@ -78,3 +78,4 @@ if st.button("Predict"):
         st.error("High Risk: Diabetes Detected")
     else:
         st.success("Low Risk: No Diabetes Detected")
+        
